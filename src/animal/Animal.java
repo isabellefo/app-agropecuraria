@@ -2,6 +2,8 @@ package animal;
 
 import java.util.Date;
 
+import vacina.CartaoVacina;
+
 public class Animal {
 	//TODO fazer serializacao
 	private static long idCont;
