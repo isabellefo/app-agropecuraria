@@ -21,6 +21,10 @@ public class Animal {
 		this.cartaoVacina = cartaoVacina;
 	}
 	
+	public void setPeso(double peso) {
+		this.peso = peso;
+	}
+	
 	public long getId() {
 		return id;
 	}
