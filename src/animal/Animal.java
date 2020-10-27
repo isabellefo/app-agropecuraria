@@ -42,9 +42,13 @@ public class Animal {
 	public Generos getGenero() {
 		return genero;
 	}
-	
+
 	public boolean estaVacinado() {
-		return cartaoVacina.estaVacinado();
+		return cartaoVacina.possuiTodasVacinas();
+	}
+
+	public CartaoVacina getCartaoVacina() {
+		return cartaoVacina;
 	}
 	
 	protected static long getProximoId() {

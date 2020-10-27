@@ -1,6 +1,7 @@
 package vacina;
 
 public class CartaoVacinaFactory {
+
 	// retirado deste site ourofinosaudeanimal.com/perguntas-frequentes/bovinos/qual-e-o-calendario-vacinal-bovinos/
 	private static final String[] vacinasBovino = {
 		"Febre aftosa", "Brucelose", "Clostridioses",
@@ -16,7 +17,7 @@ public class CartaoVacinaFactory {
 	
 	public static CartaoVacinaBovino newCartaoVacinaBovino() {
 		CartaoVacinaBovino cartaoVacina = new CartaoVacinaBovino();
-		
+
 		// preenche o cartão de vacinas com todas as vacinas para bovino
 		for(var nomeVacina: vacinasBovino) {
 			Vacina vacina = new Vacina(nomeVacina, false, null, null);
