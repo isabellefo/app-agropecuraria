@@ -1,5 +1,6 @@
 package vacina;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -46,4 +47,17 @@ public abstract class CartaoVacina {
 		vacinas.put(vacina.getNome(), vacina);
 	}
 
+	public void agendarVacina(String nomeVacina, Date dataAgendamento) {
+		Vacina vacina = null;
+
+		if(!vacinas.containsKey(nomeVacina)) {
+			vacina = new Vacina(nomeVacina, false, null, dataAgendamento);
+			adicionarVacina(vacina);
+		}
+		else {
+			vacina = vacinas.get(nomeVacina);
+			vacina.setDataAgendamento(dataAgendamento);
+		}
+
+	}
 }
