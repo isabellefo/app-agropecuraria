@@ -54,7 +54,7 @@ public class CartaoVacinaFactory {
 	}
 	
 	public static CartaoVacinaSuino newCartaoVacinaSuino(Integer[] vacinas) {
-		Boolean[] vacinasAplicadas = transformarVacinas(vacinas, CartaoVacinaBovino.getVacinas().length);
+		Boolean[] vacinasAplicadas = transformarVacinas(vacinas, CartaoVacinaSuino.getVacinas().length);
 		CartaoVacinaSuino cartaoVacina = new CartaoVacinaSuino();
 		Iterator<String> vacinasIter = Arrays.asList(CartaoVacinaSuino.getVacinas()).iterator();
 		Iterator<Boolean> vacinasAplcIter = Arrays.asList(vacinasAplicadas).iterator();

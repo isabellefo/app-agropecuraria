@@ -2,8 +2,8 @@ package menu;
 
 public class OpcaoSair extends Opcao {
 	
-	public OpcaoSair() {
-		super("Sair");
+	public OpcaoSair(String descricao) {
+		super(descricao);
 	}
 
 	public void run() {

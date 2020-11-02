@@ -95,7 +95,7 @@ public class Controlador {
 	}
 	
 	public Integer[] lerIntArr(String msg, Object[] opcoes) {
-		Integer[] nums = null;
+		Integer[] nums = new Integer[]{};
 		System.out.println(msg);
 		listarOpcoes(opcoes);
 		Validador validador = new ValidadorOpcoes(opcoes.length);
@@ -107,9 +107,6 @@ public class Controlador {
 			} catch(Exception err) {
 				System.out.println("Por favor insira suas escolhas separadas por virgula");
 				continue;
-			}
-			for(int n : nums ) {
-				System.out.println(n);
 			}
 		} while(!validador.validar(nums));
 		return nums;

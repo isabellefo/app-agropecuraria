@@ -11,8 +11,9 @@ public class Menu {
 	private Menu() {
 		ctrl = Controlador.obterControlador();
 		opcoes = new Opcao[]{
-				new OpcaoCadastrarAnimal(),
-				new OpcaoSair(),
+				new OpcaoCadastrarAnimal("Cadastrar novo animal"),
+				new OpcaoListarAnimais("Listar todos animais"),
+				new OpcaoSair("Sair"),
 				};
 	}
 	

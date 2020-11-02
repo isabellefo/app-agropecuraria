@@ -13,8 +13,8 @@ public class OpcaoCadastrarAnimal extends Opcao {
 	private final AnimalBuilder animalBuilder;
 	private final Controlador ctrl;
 	
-	protected OpcaoCadastrarAnimal() {
-		super("Cadastrar novo animal");
+	protected OpcaoCadastrarAnimal(String descricao) {
+		super(descricao);
 		 this.ctrl = Controlador.obterControlador();
 		 this.animalBuilder = new AnimalBuilder();
 	}

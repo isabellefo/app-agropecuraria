@@ -15,7 +15,6 @@ public class ValidadorOpcoes extends ValidadorOpcao implements Validador {
 		Integer[] nums = (Integer[]) target;
 		for(int n : nums) {
 			if( (n < 0) || (n >= max) ) {
-				System.out.println(n);
 				return false;
 			}
 		}

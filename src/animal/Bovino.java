@@ -6,5 +6,7 @@ public class Bovino extends Animal {
 		super();
 	}
 
-	
+	public String toString( ) {
+		return String.valueOf(getId()) + "B. " + super.toString();
+	}
 }

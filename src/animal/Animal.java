@@ -1,5 +1,7 @@
 package animal;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import vacina.CartaoVacina;
@@ -7,6 +9,7 @@ import vacina.CartaoVacina;
 public class Animal {
 	//TODO fazer serializacao
 	private static long idCont;
+	private static DateFormat dt = new SimpleDateFormat("dd/MM/yyyy");
 	
 	private long id;
 	private double peso;
@@ -88,6 +91,6 @@ public class Animal {
 	}
 	
 	public String toString() {
-		return String.valueOf(id) + ". " + raca;
+		return raca  + " " + dt.format(dataNasc);
 	}
 }
