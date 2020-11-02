@@ -1,26 +1,40 @@
 package vacina;
 
-public class CartaoVacinaFactory {
+import java.util.Arrays;
+import java.util.Iterator;
 
-	// retirado deste site ourofinosaudeanimal.com/perguntas-frequentes/bovinos/qual-e-o-calendario-vacinal-bovinos/
-	private static final String[] vacinasBovino = {
-		"Febre aftosa", "Brucelose", "Clostridioses",
-		"Botulismo", "Leptospirose", "Raiva bovina"
-	};
+public class CartaoVacinaFactory {
 	
-	// retirado deste site marangoni.com.br/conforto-animal/2019/11/08/vacinas-para-suinos-tudo-o-que-voce-precisa-saber/
-	private static final String[] vacinasSuino = {
-		"Colibacilose", "Doença de Aujeszky", "Erisipela",
-		"Leptospirose", "Parvovirose", "Peste suína clássica",
-		"Pneumonia enzoótica", "Rinite atrófica"
-	};
+	private static Boolean[] transformarVacinas(Integer[] aplicacoes, int numVacinas) {
+		Boolean[] vacinas = new Boolean[numVacinas];
+		Arrays.fill(vacinas, Boolean.FALSE);
+		for(int i : aplicacoes) {
+			vacinas[i] = true;
+		}
+		return vacinas;
+	}
 	
 	public static CartaoVacinaBovino newCartaoVacinaBovino() {
 		CartaoVacinaBovino cartaoVacina = new CartaoVacinaBovino();
 
 		// preenche o cartão de vacinas com todas as vacinas para bovino
-		for(var nomeVacina: vacinasBovino) {
+		for(var nomeVacina: CartaoVacinaBovino.getVacinas()) {
 			Vacina vacina = new Vacina(nomeVacina, false, null, null);
+			cartaoVacina.adicionarVacina(vacina);
+		}
+		
+		return cartaoVacina;
+	}
+	
+	public static CartaoVacinaBovino newCartaoVacinaBovino(Integer[] vacinas) {
+		Boolean[] vacinasAplicadas = transformarVacinas(vacinas, CartaoVacinaBovino.getVacinas().length);
+		CartaoVacinaBovino cartaoVacina = new CartaoVacinaBovino();
+		Iterator<String> vacinasIter = Arrays.asList(CartaoVacinaBovino.getVacinas()).iterator();
+		Iterator<Boolean> vacinasAplcIter = Arrays.asList(vacinasAplicadas).iterator();
+		while( vacinasIter.hasNext() && vacinasAplcIter.hasNext() ) {
+			String nomeVacina = vacinasIter.next();
+			boolean vacinado =  vacinasAplcIter.next();
+			Vacina vacina = new Vacina(nomeVacina, vacinado, null, null);
 			cartaoVacina.adicionarVacina(vacina);
 		}
 		
@@ -31,8 +45,23 @@ public class CartaoVacinaFactory {
 		CartaoVacinaSuino cartaoVacina = new CartaoVacinaSuino();
 		
 		// preenche o cartão de vacinas com todas as vacinas para suíno
-		for(var nomeVacina: vacinasSuino) {
+		for(var nomeVacina: CartaoVacinaSuino.getVacinas()) {
 			Vacina vacina = new Vacina(nomeVacina, false, null, null);
+			cartaoVacina.adicionarVacina(vacina);
+		}
+		
+		return cartaoVacina;
+	}
+	
+	public static CartaoVacinaSuino newCartaoVacinaSuino(Integer[] vacinas) {
+		Boolean[] vacinasAplicadas = transformarVacinas(vacinas, CartaoVacinaBovino.getVacinas().length);
+		CartaoVacinaSuino cartaoVacina = new CartaoVacinaSuino();
+		Iterator<String> vacinasIter = Arrays.asList(CartaoVacinaSuino.getVacinas()).iterator();
+		Iterator<Boolean> vacinasAplcIter = Arrays.asList(vacinasAplicadas).iterator();
+		while( vacinasIter.hasNext() && vacinasAplcIter.hasNext() ) {
+			String nomeVacina = vacinasIter.next();
+			boolean vacinado =  vacinasAplcIter.next();
+			Vacina vacina = new Vacina(nomeVacina, vacinado, null, null);
 			cartaoVacina.adicionarVacina(vacina);
 		}
 		

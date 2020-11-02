@@ -7,12 +7,41 @@ import vacina.CartaoVacina;
 public class Animal {
 	//TODO fazer serializacao
 	private static long idCont;
+	
 	private long id;
 	private double peso;
 	private String raca;
 	private Date dataNasc;
 	private Generos genero;
 	private CartaoVacina cartaoVacina;
+	
+	protected void setId(long id) {
+		this.id = id;
+	}
+	
+	protected void setId() {
+		this.id = Animal.getProximoId();
+	}
+	
+	protected void setPeso(double peso) {
+		this.peso = peso;
+	}
+
+	protected void setRaca(String raca) {
+		this.raca = raca;
+	}
+
+	protected void setDataNasc(Date dataNasc) {
+		this.dataNasc = dataNasc;
+	}
+
+	protected void setGenero(Generos genero) {
+		this.genero = genero;
+	}
+
+	protected void setCartaoVacina(CartaoVacina cartaoVacina) {
+		this.cartaoVacina = cartaoVacina;
+	}
 	
 	protected Animal(long id, double peso, String raca, Date dataNasc, Generos genero, CartaoVacina cartaoVacina) {
 		this.id = id;
@@ -21,6 +50,9 @@ public class Animal {
 		this.dataNasc = dataNasc;
 		this.genero = genero;
 		this.cartaoVacina = cartaoVacina;
+	}
+	
+	protected Animal() {
 	}
 	
 	public long getId() {
@@ -53,5 +85,9 @@ public class Animal {
 	
 	protected static long getProximoId() {
 		return ++idCont;
+	}
+	
+	public String toString() {
+		return String.valueOf(id) + ". " + raca;
 	}
 }
