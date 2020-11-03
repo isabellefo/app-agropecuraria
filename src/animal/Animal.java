@@ -26,7 +26,7 @@ public class Animal {
 		this.id = Animal.getProximoId();
 	}
 	
-	protected void setPeso(double peso) {
+	public void setPeso(double peso) {
 		this.peso = peso;
 	}
 
