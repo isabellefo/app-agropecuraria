@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import peso.Medida;
 import vacina.CartaoVacina;
 
 public class Animal {
@@ -12,7 +13,7 @@ public class Animal {
 	private static DateFormat dt = new SimpleDateFormat("dd/MM/yyyy");
 	
 	private long id;
-	private double peso;
+	private Medida peso;
 	private String raca;
 	private Date dataNasc;
 	private Generos genero;
@@ -26,7 +27,7 @@ public class Animal {
 		this.id = Animal.getProximoId();
 	}
 	
-	public void setPeso(double peso) {
+	public void setPeso(Medida peso) {
 		this.peso = peso;
 	}
 
@@ -46,15 +47,6 @@ public class Animal {
 		this.cartaoVacina = cartaoVacina;
 	}
 	
-	protected Animal(long id, double peso, String raca, Date dataNasc, Generos genero, CartaoVacina cartaoVacina) {
-		this.id = id;
-		this.peso = peso;
-		this.raca = raca;
-		this.dataNasc = dataNasc;
-		this.genero = genero;
-		this.cartaoVacina = cartaoVacina;
-	}
-	
 	protected Animal() {
 	}
 	
@@ -63,7 +55,7 @@ public class Animal {
 	}
 	
 	public double getPeso() {
-		return peso;
+		return peso.getQuantidade();
 	}
 	
 	public String getRaca() {
@@ -91,6 +83,10 @@ public class Animal {
 	}
 	
 	public String toString() {
-		return raca  + " " + dt.format(dataNasc);
+		return  raca
+				+ " " + dt.format(dataNasc)
+				+ " " + peso.toString()
+				+ " " +  String.valueOf(cartaoVacina.contarVacinas())
+				+ " vacinas";
 	}
 }

@@ -17,4 +17,9 @@ public class CartaoVacinaSuino extends CartaoVacina{
 		super();
 	}
 	
+	public int getTotalVacinas() {
+		// TODO Auto-generated method stub
+		return VACINAS.length;
+	}
+	
 }

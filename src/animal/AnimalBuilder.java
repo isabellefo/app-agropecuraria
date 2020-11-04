@@ -3,6 +3,7 @@ package animal;
 
 import java.util.Date;
 
+import peso.Medida;
 import vacina.CartaoVacina;
 import vacina.CartaoVacinaBovino;
 import vacina.CartaoVacinaFactory;
@@ -31,7 +32,7 @@ public class AnimalBuilder {
 		return this;
 	}
 	
-	public AnimalBuilder setPeso(double peso) {
+	public AnimalBuilder setPeso(Medida peso) {
 		this.animal.setPeso(peso);
 		return this;
 	}

@@ -3,7 +3,13 @@ package controlador;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 import java.util.stream.Stream;
+
+import peso.Arroba;
+import peso.IUnidade;
+import peso.Kilograma;
+import peso.Medida;
 
 public class Controlador {
 	static Controlador ctrl = null;
@@ -110,6 +116,35 @@ public class Controlador {
 			}
 		} while(!validador.validar(nums));
 		return nums;
+	}
+	
+	public Medida lerMedida(String msg, Validador validador) {
+		Medida m = new Medida();
+		double x = -1;
+		IUnidade unidade = new Arroba();
+		Pattern nums =  Pattern.compile("[\\+-]?\\d+.?\\d");
+		Pattern unid =  Pattern.compile("\\D+");
+		do {
+			try {
+				String entrada = scan.nextLine().trim();
+				x = Double.parseDouble( 
+						nums.matcher(entrada).group()
+					);
+				String unidadeStr = unid.matcher(entrada).group().trim();
+				if("kg".equals(unidadeStr.toLowerCase())) {
+					unidade = new Kilograma();
+				} else if(unidadeStr.isEmpty() || "@".equals(unidadeStr)) {
+					unidade = new Arroba();
+				} else  {
+					throw new Exception();
+				}
+				x = unidade.converterParaArroba(x);
+			} catch(Exception err) {
+				System.out.println("Por favor entre com uma medida valida");
+			}
+		}while(!validador.validar(x));
+		m.setQuantidade(x);
+		return m;
 	}
 	
 }

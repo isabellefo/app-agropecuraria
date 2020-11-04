@@ -10,7 +10,7 @@ public class AnimalTest {
 			.criarBovino()
 			.setRaca("Otis")
 			.setGenero(Generos.MASCULINO)
-			.setPeso(1000)
+//			.setPeso(1000)
 			.setCartaoVacina(new Integer[]{1,2,3})
 			.setdataNasc(new Date())
 			.salvarAnimal();
@@ -20,7 +20,7 @@ public class AnimalTest {
 				.criarSuino()
 				.setRaca("Porco Aranha")
 				.setGenero(Generos.FEMININO)
-				.setPeso(10)
+//				.setPeso(10)
 				.setCartaoVacina(new Integer[]{})
 				.setdataNasc(new Date())
 				.salvarAnimal();

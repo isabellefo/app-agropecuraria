@@ -17,4 +17,11 @@ public class CartaoVacinaBovino extends CartaoVacina {
 		super();
 	}
 
+	@Override
+	public int getTotalVacinas() {
+		// TODO Auto-generated method stub
+		return VACINAS.length;
+	}
+	
+
 }

@@ -3,12 +3,10 @@ package peso;
 public interface IUnidade {
 	
 	String unidadeMedida = "";
-	/**
-	 * 
-	 * @param quantidade a ser convertida
-	 * @return quantidade em arrobas
-	 */
-	public double converter(double quantidade);
+	
+	public double converterParaArroba(double quantidade);
+	
+	public double converterDeArroba(double quantidade);
 	
 	public String getUnidade(double arrobas);
 

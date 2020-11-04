@@ -8,6 +8,9 @@ import java.util.stream.Collectors;
 import java.util.function.Predicate;
 
 public abstract class CartaoVacina {
+	
+	public abstract int getTotalVacinas();
+	
 	public Map<String, Vacina> vacinas;
 
 	protected CartaoVacina() {
@@ -59,5 +62,9 @@ public abstract class CartaoVacina {
 			vacina.setDataAgendamento(dataAgendamento);
 		}
 
+	}
+	
+	public int contarVacinas() {
+		return getVacinasAplicadas().size();
 	}
 }

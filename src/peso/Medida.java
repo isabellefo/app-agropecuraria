@@ -4,18 +4,22 @@ package peso;;
 public class Medida {
 	
 	protected double quantidade;
-	protected static IUnidade unidade;
+	protected static IUnidade unidade = new Arroba();
 	
 	public void setQuantidade(double quantidade) {
 		this.quantidade = quantidade;
 	}
 	
 	public double getQuantidade() {
-		return this.quantidade;
+		return quantidade;
 	}
 	
-	public void setUnidade(IUnidade unidade) {
+	public static void setUnidade(IUnidade unidade) {
 		Medida.unidade = unidade;
+	}
+	
+	public static IUnidade getUnidade() {
+		return Medida.unidade;
 	}
 	
 	public String toString() {
