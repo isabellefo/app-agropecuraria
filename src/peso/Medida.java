@@ -1,7 +1,5 @@
   
-package peso;
-
-import animal.Animal;
+package peso;;
 
 public class Medida {
 	
@@ -17,11 +15,11 @@ public class Medida {
 	}
 	
 	public void setUnidade(IUnidade unidade) {
-		this.unidade = unidade;
+		Medida.unidade = unidade;
 	}
 	
 	public String toString() {
-		return quantidade +" "+ unidade.getUnidade();
+		return unidade.getUnidade(quantidade);
 	}
 
 }

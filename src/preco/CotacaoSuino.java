@@ -1,4 +1,4 @@
-package preço;
+package preco;
 
 public class CotacaoSuino extends Cotacao{
 	

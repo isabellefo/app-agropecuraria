@@ -3,13 +3,15 @@ package peso;
 public class Kilograma implements IUnidade{
 	
 	@Override
-	public double converter(double quantidade) {
-		return quantidade/15.0;
+	public double converter(double kilogramas) {
+		double arrobas = kilogramas/15.0;
+		return arrobas;
 	}
 
 	@Override
-	public String getUnidade() {
-		return "Kg";
+	public String getUnidade(double arrobas) {
+		double kilogramas = arrobas*15;
+		return String.valueOf(kilogramas) +" Kg";
 	}
 
 }
