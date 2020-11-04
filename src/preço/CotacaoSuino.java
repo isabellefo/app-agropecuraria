@@ -1,6 +1,6 @@
 package preço;
 
-public class CotaçãoSuino extends Cotação{
+public class CotacaoSuino extends Cotacao{
 	
 	private double precoSuino = 100.00;
 

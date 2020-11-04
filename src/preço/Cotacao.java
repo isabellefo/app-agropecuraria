@@ -1,6 +1,6 @@
 package preço;
 
-public abstract class Cotação {
+public abstract class Cotacao {
 	
 	abstract public double getCotacao();
 

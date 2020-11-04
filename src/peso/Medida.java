@@ -3,11 +3,25 @@ package peso;
 
 import animal.Animal;
 
-public abstract class Medida {
+public class Medida {
 	
-	public double medida;
-	Animal animal;
+	protected double quantidade;
+	protected static IUnidade unidade;
 	
-	abstract public void normalizarPeso();
+	public void setQuantidade(double quantidade) {
+		this.quantidade = quantidade;
+	}
+	
+	public double getQuantidade() {
+		return this.quantidade;
+	}
+	
+	public void setUnidade(IUnidade unidade) {
+		this.unidade = unidade;
+	}
+	
+	public String toString() {
+		return quantidade +" "+ unidade.getUnidade();
+	}
 
 }

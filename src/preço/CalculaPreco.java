@@ -2,10 +2,10 @@ package preço;
 
 import animal.Animal;
 
-public class CalculaPreço {
+public class CalculaPreco {
 	
 	private Animal animal;
-	private Cotação cotacao;
+	private Cotacao cotacao;
 	
 	public double getPreco() {
 		return animal.getPeso() * cotacao.getCotacao();

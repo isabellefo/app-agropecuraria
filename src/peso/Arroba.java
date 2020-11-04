@@ -1,15 +1,16 @@
 package peso;
 
-public class Kilograma implements IUnidade{
-	
+public class Arroba implements IUnidade{
+
 	@Override
 	public double converter(double quantidade) {
-		return quantidade/15.0;
+		return quantidade;
 	}
 
 	@Override
 	public String getUnidade() {
-		return "Kg";
+		return "@";
 	}
+	
 
 }
