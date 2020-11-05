@@ -1,10 +1,9 @@
 package menu;
 
-import animal.Animal;
 import animal.ColecaoAnimal;
 
 public class OpcaoListarAnimais extends Opcao {
-	private final ColecaoAnimal<Animal> genesis;
+	private final ColecaoAnimal genesis;
 	protected OpcaoListarAnimais(String descricao) {
 		super(descricao);
 		this.genesis = ColecaoAnimal.obterGenesis();

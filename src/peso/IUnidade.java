@@ -1,13 +1,31 @@
 package peso;
 
-public interface IUnidade {
+public abstract class IUnidade {
+	private static IUnidade unidade = null;
 	
 	String unidadeMedida = "";
 	
-	public double converterParaArroba(double quantidade);
+	public static IUnidade obterUnidadeSistema() {
+		if(unidade == null) {
+			unidade = new Arroba();
+		}
+		return unidade;
+	}
 	
-	public double converterDeArroba(double quantidade);
+	public static void setUnidadeSistema(IUnidade unidade) {
+		IUnidade.unidade = unidade;
+	}
 	
-	public String getUnidade(double arrobas);
+	public static IUnidade[] getAllUnidades() {
+		return new IUnidade[] {
+				new Kilograma(),
+				new Arroba(),
+		};
+	}
+	
+	public abstract double converterParaArroba(double quantidade);
+	
+	
+	public abstract String getUnidade(double arrobas);
 
 }

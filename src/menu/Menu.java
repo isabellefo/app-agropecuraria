@@ -13,6 +13,9 @@ public class Menu {
 		opcoes = new Opcao[]{
 				new OpcaoCadastrarAnimal("Cadastrar novo animal"),
 				new OpcaoListarAnimais("Listar todos animais"),
+				new OpcaoEscolherUnidade("Escolher unidade do sistema"),
+				new OpcaoCadastrarVenda("Cadastrar nova venda"),
+				new OpcaoRelatorio("Mostar relatorio dos animaiss"),
 				new OpcaoSair("Sair"),
 				};
 	}
@@ -29,8 +32,8 @@ public class Menu {
 	}
 	
 	public void escolherOpcao() {
-		int op = ctrl.lerOpcao("~Menu~", opcoes);
-		run(op);
+		Opcao op = ctrl.lerOpcao("~Menu~", opcoes);
+		op.run();
 	}
 	
 }

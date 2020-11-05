@@ -7,7 +7,7 @@ import java.util.Date;
 import peso.Medida;
 import vacina.CartaoVacina;
 
-public class Animal {
+public class Animal implements AnimalProduto {
 	//TODO fazer serializacao
 	private static long idCont;
 	private static DateFormat dt = new SimpleDateFormat("dd/MM/yyyy");
@@ -18,9 +18,18 @@ public class Animal {
 	private Date dataNasc;
 	private Generos genero;
 	private CartaoVacina cartaoVacina;
+	private double valor;
 	
 	protected void setId(long id) {
 		this.id = id;
+	}
+	
+	public double getValor() {
+		return valor;
+	}
+	
+	protected void setValor(double valor) {
+		this.valor = valor;
 	}
 	
 	protected void setId() {
@@ -87,6 +96,11 @@ public class Animal {
 				+ " " + dt.format(dataNasc)
 				+ " " + peso.toString()
 				+ " " +  String.valueOf(cartaoVacina.contarVacinas())
-				+ " vacinas";
+				+ "vacinas";
+	}
+
+	@Override
+	public double getProporcaoVacina() {
+		return this.cartaoVacina.contarVacinas() / this.cartaoVacina.contarTotalVacinas() * 100;
 	}
 }

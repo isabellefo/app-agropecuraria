@@ -11,7 +11,9 @@ import vacina.CartaoVacinaSuino;
 
 public class AnimalBuilder {
 	private Animal animal;
-	private final ColecaoAnimal<Animal> genesis;
+	private final ColecaoAnimal genesis;
+	private double valorBovino = 250;
+	private double valorSuino = 150;
 	
 	public AnimalBuilder() {
 		this.genesis = ColecaoAnimal.obterGenesis();
@@ -19,11 +21,13 @@ public class AnimalBuilder {
 	
 	public AnimalBuilder criarBovino() {
 		this.animal = new Bovino();
+		this.animal.setValor(valorBovino);
 		return this;
 	}
 	
 	public AnimalBuilder criarSuino() {
 		this.animal = new Suino();
+		this.animal.setValor(valorSuino);
 		return this;
 	}
 	
@@ -47,14 +51,14 @@ public class AnimalBuilder {
 		return this;
 	}
 	
-	private CartaoVacina criarCartao(Integer[] vacinas) {
+	private CartaoVacina criarCartao(String[] vacinas) {
 		if(animal instanceof Bovino) {
 			return CartaoVacinaFactory.newCartaoVacinaBovino(vacinas);
 		} 
 		return CartaoVacinaFactory.newCartaoVacinaSuino(vacinas);
 	}
 	
-	public AnimalBuilder setCartaoVacina(Integer[] vacinas) {
+	public AnimalBuilder setCartaoVacina(String[] vacinas) {
 		CartaoVacina cartao = criarCartao(vacinas);
 		this.animal.setCartaoVacina(cartao);
 		return this;

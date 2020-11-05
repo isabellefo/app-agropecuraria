@@ -1,15 +1,21 @@
 package animal;
 
 public enum Generos {
-	MASCULINO,
-	FEMININO;
-	
-	public static final String[] GENEROS = {
-			"MASCULINO", 
-			"FEMININO"
+	MASCULINO {
+			public String toString() {
+				return "Masculino";
+			}
+	},
+	FEMININO{
+		public String toString() {
+			return "Feminino";
+		}
 	};
 	
-	public static Generos getGenero(int genero) {
-		return genero == 0 ? Generos.MASCULINO : Generos.FEMININO;
+	public static Generos[] getGeneros() {
+		return new Generos[] {
+			Generos.MASCULINO,
+			Generos.FEMININO
+		};
 	}
 }

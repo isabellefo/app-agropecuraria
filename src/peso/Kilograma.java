@@ -1,11 +1,11 @@
 package peso;
 
-public class Kilograma implements IUnidade{
+public class Kilograma extends IUnidade{
 
 	@Override
 	public String getUnidade(double arrobas) {
 		double kilogramas = converterDeArroba(arrobas);
-		return String.valueOf(kilogramas) +" Kg";
+		return String.valueOf(kilogramas) +"Kg";
 	}
 
 	@Override
@@ -14,10 +14,14 @@ public class Kilograma implements IUnidade{
 		return arrobas;
 	}
 
-	@Override
-	public double converterDeArroba(double arrobas) {
+
+	private double converterDeArroba(double arrobas) {
 		double kilogramas = arrobas * 15.0;
 		return kilogramas;
+	}
+	
+	public String toString() {
+		return "Kilograma";
 	}
 
 }

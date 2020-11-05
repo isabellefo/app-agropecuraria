@@ -11,7 +11,7 @@ public class AnimalTest {
 			.setRaca("Otis")
 			.setGenero(Generos.MASCULINO)
 //			.setPeso(1000)
-			.setCartaoVacina(new Integer[]{1,2,3})
+//			.setCartaoVacina()
 			.setdataNasc(new Date())
 			.salvarAnimal();
 		System.out.println(boi);
@@ -21,7 +21,7 @@ public class AnimalTest {
 				.setRaca("Porco Aranha")
 				.setGenero(Generos.FEMININO)
 //				.setPeso(10)
-				.setCartaoVacina(new Integer[]{})
+//				.setCartaoVacina(new Integer[]{})
 				.setdataNasc(new Date())
 				.salvarAnimal();
 		System.out.println(porco);

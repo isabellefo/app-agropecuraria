@@ -3,7 +3,6 @@ package controlador;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-import java.util.regex.Pattern;
 import java.util.stream.Stream;
 
 import peso.Arroba;
@@ -92,12 +91,12 @@ public class Controlador {
 		}
 	}
 	
-	public int lerOpcao(String msg, Object[] opcoes) {
+	public <T> T lerOpcao(String msg, T[] opcoes) {
 		int op = 0;
 		System.out.println(msg);
 		listarOpcoes(opcoes);
 		op = ctrl.lerInt("Escolha uma opcao: ", new ValidadorOpcao(opcoes.length));
-		return op - 1;
+		return opcoes[op-1];
 	}
 	
 	public Integer[] lerIntArr(String msg, Object[] opcoes) {
@@ -109,8 +108,12 @@ public class Controlador {
 			System.out.print("Escolha as opcoes(separado por virgula): ");
 			String entrada = scan.nextLine();
 			try {
-				nums = Stream.of(entrada.split(",")).map( (String s) -> Integer.parseInt(s) - 1).toArray(Integer[]::new);
+				nums = Stream.of(entrada.split(","))
+						.map( (String s) -> Integer.parseInt(s) - 1)
+						.toArray(Integer[]::new);
+				
 			} catch(Exception err) {
+				System.out.println(err);
 				System.out.println("Por favor insira suas escolhas separadas por virgula");
 				continue;
 			}
@@ -118,28 +121,40 @@ public class Controlador {
 		return nums;
 	}
 	
+	static double getNumbers(String s) {
+
+	    String[] n = s.split("");
+	    StringBuffer f = new StringBuffer();
+
+	    for (int i = 0; i < n.length; i++) {
+	        if((n[i].matches("[0-9\\.]+"))) {
+	            f.append(n[i]);
+	        }else {
+	            return Double.parseDouble(f.toString()); 
+	        }   
+	    }
+	    return -1;
+	 }
+	
 	public Medida lerMedida(String msg, Validador validador) {
 		Medida m = new Medida();
 		double x = -1;
 		IUnidade unidade = new Arroba();
-		Pattern nums =  Pattern.compile("[\\+-]?\\d+.?\\d");
-		Pattern unid =  Pattern.compile("\\D+");
 		do {
 			try {
-				String entrada = scan.nextLine().trim();
-				x = Double.parseDouble( 
-						nums.matcher(entrada).group()
-					);
-				String unidadeStr = unid.matcher(entrada).group().trim();
-				if("kg".equals(unidadeStr.toLowerCase())) {
+				System.out.print(msg);
+				String entrada = scan.nextLine().trim().toLowerCase();
+				if(entrada.endsWith("kg")) {
 					unidade = new Kilograma();
-				} else if(unidadeStr.isEmpty() || "@".equals(unidadeStr)) {
+				} else if(entrada.endsWith("@") || entrada.matches("\\d+\\.?\\d+")) {
 					unidade = new Arroba();
 				} else  {
+					System.out.println("1. " + entrada);
 					throw new Exception();
 				}
-				x = unidade.converterParaArroba(x);
+				x = unidade.converterParaArroba(getNumbers(entrada));
 			} catch(Exception err) {
+				System.out.println(err);
 				System.out.println("Por favor entre com uma medida valida");
 			}
 		}while(!validador.validar(x));

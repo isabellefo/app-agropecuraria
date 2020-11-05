@@ -49,6 +49,10 @@ public abstract class CartaoVacina {
 	public void adicionarVacina(Vacina vacina) {
 		vacinas.put(vacina.getNome(), vacina);
 	}
+	
+	public Vacina getVacina(String vacina) {
+		return vacinas.get(vacina);
+	}
 
 	public void agendarVacina(String nomeVacina, Date dataAgendamento) {
 		Vacina vacina = null;
@@ -66,5 +70,9 @@ public abstract class CartaoVacina {
 	
 	public int contarVacinas() {
 		return getVacinasAplicadas().size();
+	}
+	
+	public int contarTotalVacinas() {
+		return vacinas.size();
 	}
 }

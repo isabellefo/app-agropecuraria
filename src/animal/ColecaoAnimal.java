@@ -4,31 +4,39 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ColecaoAnimal<T extends Animal> {
-	Map<Long, T> animais;
-	private static ColecaoAnimal<Animal> genesis = null;
+public class ColecaoAnimal implements AnimalProduto {
+	Map<Long, Animal> animais;
+	private static ColecaoAnimal genesis = null;
 	
-	public ColecaoAnimal() {
+	private ColecaoAnimal() {
 		this.animais = new HashMap<>();
 	}
 	
-	public static ColecaoAnimal<Animal> obterGenesis() {
+	public static ColecaoAnimal obterGenesis() {
 		if(genesis == null)  {
-			genesis = new ColecaoAnimal<Animal>();
+			genesis = new ColecaoAnimal();
 		}
 		return genesis;
 	}
 	
-	public void novoAnimal(T animal) {
+	public static ColecaoAnimal criarColecaoAnimal(Animal[] animais) {
+		ColecaoAnimal colecao = new ColecaoAnimal();
+		for(Animal a : animais) {
+			colecao.novoAnimal(a);
+		}
+		return colecao;
+	}
+	
+	public void novoAnimal(Animal animal) {
 		animais.put(animal.getId(), animal);
 	}
 	
-	public T getAnimal(long id) {
+	public Animal getAnimal(long id) {
 		return animais.get(id);
 	}
 	
-	public T popAnimal(long id) {
-		T animal = animais.get(id);
+	public Animal popAnimal(long id) {
+		Animal animal = animais.get(id);
 		animais.remove(id);
 		return animal;
 	}
@@ -37,19 +45,63 @@ public class ColecaoAnimal<T extends Animal> {
 		return animais.containsKey(id);
 	}
 	
-	public Collection<T> getAnimalCollection() {
+	public Collection<Animal> getAnimalCollection() {
 		return animais.values();
+	}
+	
+	public double getPeso() {
+		double pesoTotal = 0;
+		for(Animal a : getAnimalCollection()) {
+			pesoTotal += a.getPeso();
+		}
+		return pesoTotal;
+	}
+	
+	public int size() {
+		return this.animais.size();
 	}
 	
 	private String toString(long id) {
 		return animais.get(id).toString() + System.lineSeparator();
 	}
 	
+	
 	public String toString() {
-		String s = "";
+		StringBuffer buffer = new StringBuffer();
 		for(long animal: animais.keySet()) {
-			s += toString(animal);
+			buffer.append(toString(animal));
 		}
-		return s;
+		return buffer.toString();
+	}
+
+	@Override
+	public double getProporcaoVacina() {
+		double totalVacinas = 0;
+		double totalVacinasAplicadas = 0;
+		for (Animal a : getAnimalCollection()) {
+			totalVacinas += a.getCartaoVacina().contarTotalVacinas();
+			totalVacinasAplicadas += a.getCartaoVacina().contarVacinas();
+		}
+		return totalVacinasAplicadas / totalVacinas * 100;
+	}
+	
+	public double getProporcaoMachos() {
+		double totalMachos = 0;
+		for (Animal a : getAnimalCollection()) {
+			if(a.getGenero() == Generos.MASCULINO) {
+				totalMachos++;
+			}
+		}
+		return totalMachos / size() * 100;
+		
+	}
+
+	@Override
+	public double getValor() {
+		double valorTotal = 0;
+		for(Animal a : getAnimalCollection()) {
+			valorTotal += a.getValor();
+		}
+		return valorTotal;
 	}
 }
