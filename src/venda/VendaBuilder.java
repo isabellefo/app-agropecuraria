@@ -9,7 +9,11 @@ import preco.Cotacao;
 
 public class VendaBuilder {
 	private Venda venda;
+	private final ColecaoVenda vendidos;
 	
+	public VendaBuilder() {
+		this.vendidos = ColecaoVenda.obterVendidos();
+	}
 	
 	public VendaBuilder criarVenda() {
 		reset();
@@ -35,6 +39,7 @@ public class VendaBuilder {
 	}
 	
 	public Venda salvar() {
+		vendidos.novaVenda(venda);
 		return this.venda;
 	}
 	

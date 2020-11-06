@@ -30,6 +30,6 @@ public class Venda {
 	}
 	
 	public String toString() {
-		return calculadora.toString(produto) + dt.format(data);
+		return calculadora.toString(produto) + dt.format(data) + System.lineSeparator();
 	}
 }

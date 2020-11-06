@@ -96,7 +96,7 @@ public class Animal implements AnimalProduto {
 				+ " " + dt.format(dataNasc)
 				+ " " + peso.toString()
 				+ " " +  String.valueOf(cartaoVacina.contarVacinas())
-				+ "vacinas";
+				+ " vacinas";
 	}
 
 	@Override
