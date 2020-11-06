@@ -1,10 +1,9 @@
 package menu;
 
-import java.util.stream.Stream;
-
 import animal.Animal;
 import animal.ColecaoAnimal;
 import controlador.Controlador;
+import vacina.Vacina;
 
 public class OpcaoAdicionaVacina extends Opcao {
 	
@@ -25,6 +24,10 @@ public class OpcaoAdicionaVacina extends Opcao {
 	
 	private void lerVacina() {
 		//TODO listar as vacinas corretas e aplicar
+		Vacina[] vacinas = animal.getCartaoVacina().getVacinasNaoAplicadas().toArray(Vacina[]::new);
+		Vacina vacinaAplicada = ctrl.lerOpcao("Vacinas nao aplicadas", vacinas);
+		vacinaAplicada.setAplicada(true);
+		
 	}
 
 

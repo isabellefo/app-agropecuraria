@@ -3,8 +3,6 @@ package peso;
 public abstract class IUnidade {
 	private static IUnidade unidade = null;
 	
-	String unidadeMedida = "";
-	
 	public static IUnidade obterUnidadeSistema() {
 		if(unidade == null) {
 			unidade = new Arroba();
@@ -13,7 +11,6 @@ public abstract class IUnidade {
 	}
 	
 	public static void setUnidadeSistema(IUnidade unidade) {
-		IUnidade.unidade = unidade;
 	}
 	
 	public static IUnidade[] getAllUnidades() {
