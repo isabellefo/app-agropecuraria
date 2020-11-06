@@ -3,7 +3,6 @@ package preco;
 import animal.AnimalProduto;
 
 public abstract class Cotacao {
-	private static Cotacao cotacaoSistema = null;
 	
 	public static Cotacao[] getCotacoes() {
 		return  new Cotacao[] {

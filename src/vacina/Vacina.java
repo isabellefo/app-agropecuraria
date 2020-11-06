@@ -53,4 +53,8 @@ public class Vacina {
 		return this;
 	}
 	
+	public String toString() {
+		return nome;
+	}
+	
 }

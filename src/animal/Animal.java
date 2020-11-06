@@ -36,7 +36,7 @@ public class Animal implements AnimalProduto {
 		this.id = Animal.getProximoId();
 	}
 	
-	public void setPeso(Medida peso) {
+	protected void setPeso(Medida peso) {
 		this.peso = peso;
 	}
 
