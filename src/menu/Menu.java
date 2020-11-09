@@ -15,9 +15,9 @@ public class Menu {
 				new OpcaoListarAnimais("Listar todos animais"),
 				new OpcaoEscolherUnidade("Escolher unidade do sistema"),
 				new OpcaoCadastrarVenda("Cadastrar nova venda"),
-				new OpcaoRelatorio("Mostar relatorio dos animais"),
+				new OpcaoRelatorio("Mostrar relatorio dos animais"),
 				new OpcaoListarVendas("Listar vendas"),
-				new OpcaoAdicionaVacina("Adiconar Vacina para um novo animal"),
+				new OpcaoAdicionaVacina("Adicionar vacina para um novo animal"),
 				new OpcaoSair("Sair"),
 				};
 	}

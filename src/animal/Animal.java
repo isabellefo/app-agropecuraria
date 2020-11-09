@@ -12,7 +12,7 @@ public class Animal implements AnimalProduto {
 	//TODO fazer serializacao
 	private static long idCont;
 	private static DateFormat dt = new SimpleDateFormat("dd/MM/yyyy");
-	
+
 	private long id;
 	private Medida peso;
 	private String raca;

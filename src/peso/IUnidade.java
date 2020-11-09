@@ -11,6 +11,7 @@ public abstract class IUnidade {
 	}
 	
 	public static void setUnidadeSistema(IUnidade unidade) {
+		IUnidade.unidade = unidade;
 	}
 	
 	public static IUnidade[] getAllUnidades() {
