@@ -86,12 +86,10 @@ public class ColecaoAnimal implements AnimalProduto {
 	@Override
 	public double getProporcaoVacina() {
 		double totalVacinas = 0;
-		double totalVacinasAplicadas = 0;
 		for (Animal a : getAnimalCollection()) {
-			totalVacinas += a.getCartaoVacina().contarTotalVacinas();
-			totalVacinasAplicadas += a.getCartaoVacina().contarVacinas();
+			totalVacinas += a.getCartaoVacina().possuiTodasVacinas() ? 1 : 0;
 		}
-		return totalVacinasAplicadas / totalVacinas * 100;
+		return  totalVacinas / size() * 100;
 	}
 	
 	public double getProporcaoMachos() {
