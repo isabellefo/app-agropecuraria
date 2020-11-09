@@ -4,6 +4,8 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import preco.CalculaPreco;
+
 public class ColecaoAnimal implements AnimalProduto {
 	Map<Long, Animal> animais;
 	private static ColecaoAnimal genesis = null;
@@ -100,6 +102,14 @@ public class ColecaoAnimal implements AnimalProduto {
 			}
 		}
 		return totalMachos / size() * 100;
+		
+	}
+	public double getPreco(CalculaPreco calculadora) {
+		double total = 0;
+		for(Animal a : getAnimalCollection()) {
+			total += a.getPreco(calculadora);
+		}
+		return total;
 		
 	}
 

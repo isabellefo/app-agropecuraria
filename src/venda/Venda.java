@@ -26,10 +26,10 @@ public class Venda {
 	}
 
 	public double cacularValorTotal() {
-		return calculadora.getPreco(produto);
+		return produto.getPreco(calculadora);
 	}
 	
 	public String toString() {
-		return calculadora.toString(produto) + dt.format(data) + System.lineSeparator();
+		return calculadora.toString(produto) +" "+ dt.format(data) + System.lineSeparator();
 	}
 }
