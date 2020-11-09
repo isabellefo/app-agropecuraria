@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import peso.Medida;
+import preco.CalculaPreco;
 import vacina.CartaoVacina;
 
 public class Animal implements AnimalProduto {
@@ -102,5 +103,9 @@ public class Animal implements AnimalProduto {
 	@Override
 	public double getProporcaoVacina() {
 		return this.cartaoVacina.contarVacinas() / this.cartaoVacina.contarTotalVacinas() * 100;
+	}
+	
+	public double getPreco(CalculaPreco calculadora) {
+		return calculadora.getPreco(this);
 	}
 }

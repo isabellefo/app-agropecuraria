@@ -113,7 +113,6 @@ public class Controlador {
 						.toArray(Integer[]::new);
 				
 			} catch(Exception err) {
-				System.out.println(err);
 				System.out.println("Por favor insira suas escolhas separadas por virgula");
 				continue;
 			}
@@ -149,12 +148,10 @@ public class Controlador {
 				} else if(entrada.endsWith("@") || entrada.matches("\\d+\\.?\\d+")) {
 					unidade = new Arroba();
 				} else  {
-					System.out.println("1. " + entrada);
 					throw new Exception();
 				}
 				x = unidade.converterParaArroba(getNumbers(entrada));
 			} catch(Exception err) {
-				System.out.println(err);
 				System.out.println("Por favor entre com uma medida valida");
 			}
 		}while(!validador.validar(x));

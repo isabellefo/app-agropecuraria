@@ -8,7 +8,7 @@ public class CalculaPreco {
 	
 	private Cotacao cotacao;
 	
-	public double getPreco(AnimalProduto produto) {
+	public double getPreco(Animal produto) {
 		return produto.getPeso() * cotacao.getCotacao(produto);
 	}
 	
@@ -21,11 +21,11 @@ public class CalculaPreco {
 		if(produto instanceof ColecaoAnimal) {
 			for(Animal a : ((ColecaoAnimal) produto).getAnimalCollection() ) {
 				buffer.append(a + " ");
-				buffer.append(getPreco(a) + "R$" + System.lineSeparator());
+				buffer.append(a.getPreco(this) + "R$" + System.lineSeparator());
 			}
 		}
 		buffer.append("TOTAL: ");
-		buffer.append(getPreco(produto));
+		buffer.append(produto.getPreco(this));
 		return buffer.toString();
 	}
 }
