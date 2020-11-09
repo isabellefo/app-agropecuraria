@@ -57,6 +57,15 @@ public class ColecaoAnimal implements AnimalProduto {
 		return pesoTotal;
 	}
 	
+	@Override
+	public double getValor() {
+		double valorTotal = 0;
+		for(Animal a : getAnimalCollection()) {
+			valorTotal += a.getValor();
+		}
+		return valorTotal;
+	}
+	
 	public int size() {
 		return this.animais.size();
 	}
@@ -96,12 +105,5 @@ public class ColecaoAnimal implements AnimalProduto {
 		
 	}
 
-	@Override
-	public double getValor() {
-		double valorTotal = 0;
-		for(Animal a : getAnimalCollection()) {
-			valorTotal += a.getValor();
-		}
-		return valorTotal;
-	}
+
 }
