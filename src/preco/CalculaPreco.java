@@ -21,11 +21,11 @@ public class CalculaPreco {
 		if(produto instanceof ColecaoAnimal) {
 			for(Animal a : ((ColecaoAnimal) produto).getAnimalCollection() ) {
 				buffer.append(a + " ");
-				buffer.append(getPreco(produto) + System.lineSeparator());
+				buffer.append(getPreco(a) + System.lineSeparator());
 			}
 			return buffer.toString();
 		}
-		buffer.append(produto + " ");
+		buffer.append("TOTAL: ");
 		buffer.append(getPreco(produto));
 		return buffer.toString();
 	}
