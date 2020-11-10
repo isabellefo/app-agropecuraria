@@ -1,56 +1,530 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="peso.Arroba" project="app-agropecuaria" 
-    file="/app-agropecuaria/src/peso/Arroba.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="432" y="392"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="2" language="java" name="peso.IUnidade" project="app-agropecuaria" 
-    file="/app-agropecuaria/src/peso/IUnidade.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="576" y="168"/>    
+  <interface id="1" language="java" name="animal.AnimalProduto" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/animal/AnimalProduto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="412" y="1103"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="3" language="java" name="peso.Medida" project="app-agropecuaria" 
-    file="/app-agropecuaria/src/peso/Medida.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="226" y="177"/>    
+  <class id="2" language="java" name="animal.Bovino" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/animal/Bovino.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="960" y="1207"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="peso.Kilograma" project="app-agropecuaria" 
+  <class id="3" language="java" name="animal.ColecaoAnimal" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/animal/ColecaoAnimal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="377" y="1432"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="animal.Suino" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/animal/Suino.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="982" y="1068"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="5" language="java" name="animal.Generos" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/animal/Generos.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="984" y="870"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="6" language="java" name="animal.AnimalBuilder" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/animal/AnimalBuilder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="788" y="1645"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="animal.Animal" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/animal/Animal.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="592" width="232" x="571" y="777"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <enumeration id="8" language="java" name="animal.Familias" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/animal/Familias.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="953" y="634"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </enumeration>  
+  <class id="9" language="java" name="controlador.Controlador" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/controlador/Controlador.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-652" y="552"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="controlador.ValidadorOpcao" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/controlador/ValidadorOpcao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-341" y="462"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="11" language="java" name="controlador.Validador" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/controlador/Validador.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-375" y="891"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="12" language="java" name="controlador.ValidadorOpcoes" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/controlador/ValidadorOpcoes.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-347" y="711"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="controlador.ValidadorPositivo" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/controlador/ValidadorPositivo.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-645" y="962"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="controlador.ValidadorNome" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/controlador/ValidadorNome.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-613" y="798"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="menu.Menu" project="app-agropecuaria" file="/app-agropecuaria/src/menu/Menu.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-660" y="152"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="menu.Opcao" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/menu/Opcao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-429" y="149"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="peso.Arroba" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/peso/Arroba.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="465" y="198"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="peso.IUnidade" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/peso/IUnidade.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="728" y="216"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="peso.Kilograma" project="app-agropecuaria" 
     file="/app-agropecuaria/src/peso/Kilograma.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="687" y="401"/>    
+    <position height="-1" width="-1" x="1067" y="215"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <realization id="5">    
-    <end type="SOURCE" refId="1"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <realization id="6">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="2"/>  
-  </realization>  
-  <association id="7">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="8" name="unidade"/>      
-      <multiplicity id="9" minimum="0" maximum="1"/>    
+  <class id="20" language="java" name="peso.Medida" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/peso/Medida.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="661" y="570"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="preco.CalculaPreco" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/preco/CalculaPreco.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1432" y="949"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="preco.Cotacao" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/preco/Cotacao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1743" y="969"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="preco.CotacaoFamilia" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/preco/CotacaoFamilia.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1450" y="741"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="preco.CotacaoVacinas" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/preco/CotacaoVacinas.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1786" y="781"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="relatorio.Relatorio" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/relatorio/Relatorio.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="26" y="1464"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="vacina.CartaoVacina" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/vacina/CartaoVacina.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="311" y="713"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="vacina.CartaoVacinaBovino" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/vacina/CartaoVacinaBovino.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-40" y="602"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="vacina.CartaoVacinaFactory" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/vacina/CartaoVacinaFactory.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="10" y="1097"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="vacina.CartaoVacinaSuino" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/vacina/CartaoVacinaSuino.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="-19" y="855"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="vacina.Vacina" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/vacina/Vacina.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="93" y="298"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="venda.ColecaoVenda" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/venda/ColecaoVenda.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1194" y="1663"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="venda.Venda" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/venda/Venda.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1430" y="1285"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="venda.VendaBuilder" project="app-agropecuaria" 
+    file="/app-agropecuaria/src/venda/VendaBuilder.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1510" y="1620"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="34">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="35" name="vendidos"/>      
+      <multiplicity id="36" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="37">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="38" name="genesis"/>      
+      <multiplicity id="39" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="40">    
+    <bendpoint x="-472" y="693"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <association id="41">    
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="42" name="vendidos"/>      
+      <multiplicity id="43" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="31" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="44">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <association id="45">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="46" name="menu"/>      
+      <multiplicity id="47" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="48">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="49" name="opcoes"/>      
+      <multiplicity id="50" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="51">    
+    <end type="SOURCE" refId="26" navigable="false">      
+      <attribute id="52" name="vacinas"/>      
+      <multiplicity id="53" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="30" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="54">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="55" name="cotacao"/>      
+      <multiplicity id="56" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="57">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="58" name="ctrl"/>      
+      <multiplicity id="59" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="60">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </realization>  
+  <generalization id="61">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="62">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="63" name="animal"/>      
+      <multiplicity id="64" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="65">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="66" name="peso"/>      
+      <multiplicity id="67" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="68">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="69" name="ctrl"/>      
+      <multiplicity id="70" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="71">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <generalization id="72">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <realization id="73">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <association id="74">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="75" name="cartaoVacina"/>      
+      <multiplicity id="76" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="26" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="77">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <generalization id="78">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="22"/>  
+  </generalization>  
+  <association id="79">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="80" name="calculadora"/>      
+      <multiplicity id="81" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="82">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="83" name="genesis"/>      
+      <multiplicity id="84" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="85">    
+    <end type="SOURCE" refId="31" navigable="false">      
+      <attribute id="86" name="vendas"/>      
+      <multiplicity id="87" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="88">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="23"/>  
+  </generalization>  
+  <generalization id="89">    
+    <end type="SOURCE" refId="29"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <association id="90">    
+    <end type="SOURCE" refId="33" navigable="false">      
+      <attribute id="91" name="venda"/>      
+      <multiplicity id="92" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="32" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="93">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="94" name="animais"/>      
+      <multiplicity id="95" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="96">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="97" name="unidade"/>      
+      <multiplicity id="98" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="99">    
+    <end type="SOURCE" refId="17"/>    
+    <end type="TARGET" refId="18"/>  
+  </generalization>  
+  <association id="100">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="101" name="genesis"/>      
+      <multiplicity id="102" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="103">    
+    <end type="SOURCE" refId="32" navigable="false">      
+      <attribute id="104" name="produto"/>      
+      <multiplicity id="105" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="106">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="26"/>  
+  </generalization>  
+  <realization id="107">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="11"/>  
+  </realization>  
+  <generalization id="108">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="109">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="110" name="genero"/>      
+      <multiplicity id="111" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
